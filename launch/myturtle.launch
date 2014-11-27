@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="turtlesim" name="sim1" type="turtlesim_node"/>
+  <node pkg="turtlesim" name="sim2" type="turtlesim_node">
+    <remap from="turtle1/cmd_vel" to="cmd_input" />
+  </node>
+  <node pkg="turtlesim" name="key" type="turtle_teleop_key"/>
+
+</launch>
